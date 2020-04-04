@@ -2,22 +2,31 @@ extends KinematicBody2D
 
 var speed = 200
 var velocity = Vector2()
-	
+onready var sprite = get_node("AnimatedSprite")
+
 
 func get_input():
 	
-	look_at(get_global_mouse_position())
+	#look_at(get_global_mouse_position())
 	
 	velocity = Vector2()
 	
 	if Input.is_action_pressed("up"):
 		velocity.y -= 1
+		sprite.play("walk_north")
+	
 	elif Input.is_action_pressed("left"):
 		velocity.x -= 1
+		sprite.play("walk_left")
 	elif Input.is_action_pressed("down"):
 		velocity.y += 1
+		sprite.play("walk_south")
 	elif Input.is_action_pressed("right"):
 		velocity.x += 1
+		sprite.play("walk_right")
+	else:
+		sprite.stop()
+
 	velocity = velocity.normalized() * speed 
 	move_and_slide(velocity)
 
