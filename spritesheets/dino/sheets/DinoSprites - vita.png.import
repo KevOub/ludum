@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/DinoSprites - vita.png-ce2f72183b0f851c577c03b3522f690a.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://spritesheets/dino/sheets/DinoSprites - vita.png"
+dest_files=[ "res://.import/DinoSprites - vita.png-ce2f72183b0f851c577c03b3522f690a.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=true
+flags/anisotropic=true
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

@@ -16,8 +16,18 @@ _global_script_class_icons={
 [application]
 
 config/name="Grid-movement"
-run/main_scene="res://player/Player.tscn"
+run/main_scene="res://root.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=480
+window/size/height=270
+window/size/fullscreen=true
+window/size/test_width=940
+window/size/test_height=270
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
 
 [input]
 
@@ -48,4 +58,5 @@ up={
 
 [rendering]
 
+quality/2d/use_pixel_snap=true
 environment/default_environment="res://default_env.tres"
