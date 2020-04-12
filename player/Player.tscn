@@ -1,10 +1,11 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://spritesheet/DinoSprites - vita.png" type="Texture" id=1]
 [ext_resource path="res://player/Player.gd" type="Script" id=2]
+[ext_resource path="res://images/shadows.png" type="Texture" id=3]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 4.91205, 7.685 )
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 171.478, 124.236 )
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 9
@@ -149,24 +150,39 @@ animations = [ {
 "speed": 15.0
 } ]
 
+[sub_resource type="OccluderPolygon2D" id=27]
+polygon = PoolVector2Array( -5.78839, -3.00859, 4.73138, -2.88184, 9.92789, -20.2458, 3.96793, -20.2835, -10.0977, -20.3725 )
+
 [node name="Player" type="Node"]
 
 [node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 384, 128 )
+position = Vector2( 384.121, 128.229 )
+scale = Vector2( 0.0522266, 0.0780081 )
 script = ExtResource( 2 )
 
-[node name="Tween" type="Tween" parent="Player"]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource( 1 )
+position = Vector2( 0, 0.00012207 )
+shape = SubResource( 26 )
 
 [node name="Body" type="AnimatedSprite" parent="Player"]
-position = Vector2( -3.05176e-05, 1.90735e-06 )
+position = Vector2( 0, 0.00012207 )
+scale = Vector2( 19.0504, 12.9414 )
 frames = SubResource( 25 )
 animation = "attack"
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2( -3.05176e-05, 0 )
+position = Vector2( 0, 0.00012207 )
 scale = Vector2( 2.26164, 2.07421 )
 rotating = true
 current = true
+
+[node name="Light2D" type="Light2D" parent="Player"]
+position = Vector2( 0, -2.93359 )
+scale = Vector2( 1.00031, 0.660733 )
+texture = ExtResource( 3 )
+energy = 0.2
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Player"]
+position = Vector2( -2.32568, 152.364 )
+scale = Vector2( 19.1473, 12.8192 )
+occluder = SubResource( 27 )

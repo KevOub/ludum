@@ -1,13 +1,14 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://spritesheet/0x72_16x16DungeonTileset.v4.png" type="Texture" id=2]
 [ext_resource path="res://spritesheet/0x72_16x16DungeonTileset_walls.v2.png" type="Texture" id=3]
-[ext_resource path="res://images/shadows.png" type="Texture" id=4]
+[ext_resource path="res://items/Light.tscn" type="PackedScene" id=4]
 [ext_resource path="res://images/background.png" type="Texture" id=5]
 [ext_resource path="res://CollisionWalls.tres" type="TileSet" id=6]
+[ext_resource path="res://enemies/enemies.tscn" type="PackedScene" id=7]
 
-[sub_resource type="TileSet" id=1]
+[sub_resource type="TileSet" id=13]
 2/name = "0x72_16x16DungeonTileset.v4.png 2"
 2/texture = ExtResource( 2 )
 2/tex_offset = Vector2( 0, 0 )
@@ -31,85 +32,6 @@
 2/shape_one_way_margin = 0.0
 2/shapes = [  ]
 2/z_index = 0
-4/name = "0x72_16x16DungeonTileset.v4.png 4"
-4/texture = ExtResource( 2 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 64, 32, 16, 32 )
-4/tile_mode = 1
-4/autotile/bitmask_mode = 0
-4/autotile/bitmask_flags = [  ]
-4/autotile/icon_coordinate = Vector2( 0, 0 )
-4/autotile/tile_size = Vector2( 16, 16 )
-4/autotile/spacing = 0
-4/autotile/occluder_map = [  ]
-4/autotile/navpoly_map = [  ]
-4/autotile/priority_map = [  ]
-4/autotile/z_index_map = [  ]
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape_one_way = false
-4/shape_one_way_margin = 0.0
-4/shapes = [  ]
-4/z_index = 0
-5/name = "0x72_16x16DungeonTileset.v4.png 5"
-5/texture = ExtResource( 2 )
-5/tex_offset = Vector2( 0, 0 )
-5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 240, 176, 16, 16 )
-5/tile_mode = 0
-5/occluder_offset = Vector2( 0, 0 )
-5/navigation_offset = Vector2( 0, 0 )
-5/shape_offset = Vector2( 0, 0 )
-5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape_one_way = false
-5/shape_one_way_margin = 0.0
-5/shapes = [  ]
-5/z_index = 0
-8/name = "0x72_16x16DungeonTileset.v4.png 8"
-8/texture = ExtResource( 2 )
-8/tex_offset = Vector2( 0, 0 )
-8/modulate = Color( 1, 1, 1, 1 )
-8/region = Rect2( 0, 0, 16, 16 )
-8/tile_mode = 2
-8/autotile/icon_coordinate = Vector2( 0, 0 )
-8/autotile/tile_size = Vector2( 16, 16 )
-8/autotile/spacing = 0
-8/autotile/occluder_map = [  ]
-8/autotile/navpoly_map = [  ]
-8/autotile/priority_map = [  ]
-8/autotile/z_index_map = [  ]
-8/occluder_offset = Vector2( 0, 0 )
-8/navigation_offset = Vector2( 0, 0 )
-8/shape_offset = Vector2( 0, 0 )
-8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-8/shape_one_way = false
-8/shape_one_way_margin = 0.0
-8/shapes = [  ]
-8/z_index = 0
-9/name = "0x72_16x16DungeonTileset.v4.png 9"
-9/texture = ExtResource( 2 )
-9/tex_offset = Vector2( 0, 0 )
-9/modulate = Color( 1, 1, 1, 1 )
-9/region = Rect2( 16, 0, 16, 32 )
-9/tile_mode = 2
-9/autotile/icon_coordinate = Vector2( 0, 0 )
-9/autotile/tile_size = Vector2( 16, 16 )
-9/autotile/spacing = 0
-9/autotile/occluder_map = [  ]
-9/autotile/navpoly_map = [  ]
-9/autotile/priority_map = [  ]
-9/autotile/z_index_map = [  ]
-9/occluder_offset = Vector2( 0, 0 )
-9/navigation_offset = Vector2( 0, 0 )
-9/shape_offset = Vector2( 0, 0 )
-9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-9/shape_one_way = false
-9/shape_one_way_margin = 0.0
-9/shapes = [  ]
-9/z_index = 0
 14/name = "0x72_16x16DungeonTileset_walls.v2.png 14"
 14/texture = ExtResource( 3 )
 14/tex_offset = Vector2( 0, 0 )
@@ -124,91 +46,17 @@
 14/shape_one_way_margin = 0.0
 14/shapes = [  ]
 14/z_index = 0
-19/name = "0x72_16x16DungeonTileset.v4.png 19"
-19/texture = ExtResource( 2 )
-19/tex_offset = Vector2( 0, 0 )
-19/modulate = Color( 1, 1, 1, 1 )
-19/region = Rect2( 32, 0, 16, 32 )
-19/tile_mode = 2
-19/autotile/icon_coordinate = Vector2( 0, 0 )
-19/autotile/tile_size = Vector2( 16, 16 )
-19/autotile/spacing = 0
-19/autotile/occluder_map = [  ]
-19/autotile/navpoly_map = [  ]
-19/autotile/priority_map = [  ]
-19/autotile/z_index_map = [  ]
-19/occluder_offset = Vector2( 0, 0 )
-19/navigation_offset = Vector2( 0, 0 )
-19/shape_offset = Vector2( 0, 0 )
-19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-19/shape_one_way = false
-19/shape_one_way_margin = 0.0
-19/shapes = [  ]
-19/z_index = 0
 
-[sub_resource type="AtlasTexture" id=2]
-flags = 9
-atlas = ExtResource( 2 )
-region = Rect2( 128, 153, 16, 17 )
+[node name="World" type="Node"]
 
-[sub_resource type="AtlasTexture" id=3]
-flags = 9
-atlas = ExtResource( 2 )
-region = Rect2( 144, 153, 16, 17 )
-
-[sub_resource type="AtlasTexture" id=4]
-flags = 9
-atlas = ExtResource( 2 )
-region = Rect2( 160, 153, 16, 17 )
-
-[sub_resource type="AtlasTexture" id=5]
-flags = 9
-atlas = ExtResource( 2 )
-region = Rect2( 176, 153, 16, 17 )
-
-[sub_resource type="AtlasTexture" id=6]
-flags = 9
-atlas = ExtResource( 2 )
-region = Rect2( 192, 153, 16, 17 )
-
-[sub_resource type="AtlasTexture" id=7]
-flags = 9
-atlas = ExtResource( 2 )
-region = Rect2( 208, 153, 16, 17 )
-
-[sub_resource type="AtlasTexture" id=8]
-flags = 9
-atlas = ExtResource( 2 )
-region = Rect2( 224, 153, 16, 17 )
-
-[sub_resource type="AtlasTexture" id=9]
-flags = 9
-atlas = ExtResource( 2 )
-region = Rect2( 240, 153, 16, 17 )
-
-[sub_resource type="SpriteFrames" id=10]
-animations = [ {
-"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[node name="world" type="Node"]
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-[node name="background" type="ParallaxLayer" parent="ParallaxBackground"]
-modulate = Color( 0.380392, 0.380392, 0.380392, 1 )
-position = Vector2( 411, 219 )
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 408, 288 )
 scale = Vector2( 1.652, 1.14 )
-
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/background"]
-position = Vector2( 5.56498, 48.9948 )
 texture = ExtResource( 5 )
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource( 1 )
+tile_set = SubResource( 13 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 65560, 14, 0, 196629, 2, 0, 196630, 2, 2, 196631, 2, 2, 196632, 2, 2, 196633, 2, 2, 196634, 2, 1, 196635, 2, 2, 196636, 2, 1, 196637, 2, 1, 196638, 2, 3, 262163, 2, 0, 262164, 2, 1, 262165, 2, 65537, 262166, 2, 65538, 262167, 2, 65538, 262168, 2, 65538, 262169, 2, 65538, 262170, 2, 65538, 262171, 2, 65537, 262172, 2, 65538, 262173, 2, 65537, 262174, 2, 65537, 262175, 2, 3, 327697, 2, 0, 327698, 2, 2, 327699, 2, 65537, 327700, 2, 65538, 327701, 2, 65537, 327702, 2, 65537, 327703, 2, 65538, 327704, 2, 65537, 327705, 2, 65537, 327706, 2, 65538, 327707, 2, 65538, 327708, 2, 65537, 327709, 2, 65538, 327710, 2, 65537, 327711, 2, 65539, 393232, 2, 0, 393233, 2, 65537, 393234, 2, 65537, 393235, 2, 65537, 393236, 2, 65538, 393237, 2, 65538, 393238, 2, 65537, 393239, 2, 65537, 393240, 2, 65538, 393241, 2, 65537, 393242, 2, 65538, 393243, 2, 65537, 393244, 2, 65538, 393245, 2, 65537, 393246, 2, 65538, 393247, 2, 65539, 458768, 2, 65536, 458769, 2, 65538, 458770, 2, 65538, 458771, 2, 65537, 458772, 2, 65537, 458773, 2, 65537, 458774, 2, 65538, 458775, 2, 65537, 458776, 2, 65537, 458777, 2, 65538, 458778, 2, 65537, 458779, 2, 65537, 458780, 2, 65537, 458781, 2, 65538, 458782, 2, 65537, 458783, 2, 65539, 524303, 2, 0, 524304, 2, 65537, 524305, 2, 65537, 524306, 2, 65537, 524307, 2, 65538, 524308, 2, 65537, 524309, 2, 65538, 524310, 2, 65537, 524311, 2, 65537, 524312, 2, 65538, 524313, 2, 65537, 524314, 2, 65538, 524315, 2, 65537, 524316, 2, 65537, 524317, 2, 65537, 524318, 2, 65538, 524319, 2, 65539, 589839, 2, 65536, 589840, 2, 65538, 589841, 2, 65537, 589842, 2, 65537, 589843, 2, 65538, 589844, 2, 65538, 589845, 2, 65538, 589846, 2, 65538, 589847, 2, 65537, 589848, 2, 65538, 589849, 2, 65538, 589850, 2, 65537, 589851, 2, 65537, 589852, 2, 65537, 589853, 2, 65538, 589854, 2, 65538, 589855, 2, 65539, 655374, 2, 0, 655375, 2, 65537, 655376, 2, 65537, 655377, 2, 65537, 655378, 2, 65537, 655379, 2, 65538, 655380, 2, 65538, 655381, 2, 65538, 655382, 2, 65538, 655383, 2, 65537, 655384, 2, 65537, 655385, 2, 65538, 655386, 2, 65538, 655387, 2, 65538, 655388, 2, 65537, 655389, 2, 65538, 655390, 2, 65537, 655391, 2, 65539, 720910, 2, 65536, 720911, 2, 65538, 720912, 2, 65537, 720913, 2, 65538, 720914, 2, 65538, 720915, 2, 65537, 720916, 2, 65538, 720917, 2, 65538, 720918, 2, 65538, 720919, 2, 65538, 720920, 2, 65538, 720921, 2, 65537, 720922, 2, 65537, 720923, 2, 65537, 720924, 2, 65537, 720925, 2, 65538, 720926, 2, 65537, 720927, 2, 65539, 786445, 2, 0, 786446, 2, 65537, 786447, 2, 65538, 786448, 2, 65538, 786449, 2, 65537, 786450, 2, 65538, 786451, 2, 65537, 786452, 2, 65538, 786453, 2, 65538, 786454, 2, 65538, 786455, 2, 65537, 786456, 2, 65538, 786457, 2, 65538, 786458, 2, 65538, 786459, 2, 65537, 786460, 2, 65538, 786461, 2, 65537, 786462, 2, 65538, 786463, 2, 65539, 851981, 2, 131072, 851982, 2, 65537, 851983, 2, 65538, 851984, 2, 65538, 851985, 2, 65537, 851986, 2, 65537, 851987, 2, 65538, 851988, 2, 65537, 851989, 2, 65538, 851990, 2, 65537, 851991, 2, 65537, 851992, 2, 65538, 851993, 2, 65537, 851994, 2, 65538, 851995, 2, 65538, 851996, 2, 65537, 851997, 2, 65538, 851998, 2, 65537, 851999, 2, 65539, 917518, 2, 131072, 917519, 2, 131074, 917520, 2, 131074, 917521, 2, 65537, 917522, 2, 65537, 917523, 2, 65537, 917524, 2, 65537, 917525, 2, 65537, 917526, 2, 65538, 917527, 2, 65538, 917528, 2, 65537, 917529, 2, 65538, 917530, 2, 65537, 917531, 2, 65538, 917532, 2, 65537, 917533, 2, 131074, 917534, 2, 131074, 917535, 2, 131075, 983057, 2, 131072, 983058, 2, 131073, 983059, 2, 131074, 983060, 2, 131073, 983061, 2, 131073, 983062, 2, 131073, 983063, 2, 131074, 983064, 2, 131074, 983065, 2, 131074, 983066, 2, 131074, 983067, 2, 131073, 983068, 2, 131075 )
@@ -219,34 +67,15 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 131093, 0, 0, 131094, 0, 0, 131095, 0, 0, 131098, 0, 0, 131099, 0, 0, 131100, 0, 0, 131101, 0, 0, 131102, 0, 0, 196627, 0, 0, 196628, 0, 0, 196639, 0, 0, 262161, 0, 0, 262162, 0, 0, 262176, 0, 0, 327696, 0, 0, 327712, 0, 0, 393231, 0, 0, 393248, 0, 0, 458767, 0, 0, 458784, 0, 0, 524302, 0, 0, 524320, 0, 0, 589838, 0, 0, 589856, 0, 0, 655373, 0, 0, 655392, 0, 0, 720909, 0, 0, 720928, 0, 0, 786444, 0, 0, 786464, 0, 0, 851980, 0, 0, 852000, 0, 0, 917517, 0, 0, 917536, 0, 0, 983054, 0, 0, 983055, 0, 0, 983056, 0, 0, 983069, 0, 0, 983070, 0, 0, 983071, 0, 0, 1048593, 0, 0, 1048594, 0, 0, 1048595, 0, 0, 1048596, 0, 0, 1048597, 0, 0, 1048598, 0, 0, 1048599, 0, 0, 1048600, 0, 0, 1048601, 0, 0, 1048602, 0, 0, 1048603, 0, 0, 1048604, 0, 0 )
 
-[node name="Node" type="Node" parent="."]
+[node name="Lights" type="Node" parent="."]
 
-[node name="Candle2" type="AnimatedSprite" parent="Node"]
-position = Vector2( 504, 104 )
-frames = SubResource( 10 )
-frame = 2
-playing = true
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Candle" parent="Lights" instance=ExtResource( 4 )]
 
-[node name="Light2D" type="Light2D" parent="Node/Candle2"]
-scale = Vector2( 0.048, 0.048 )
-texture = ExtResource( 4 )
-color = Color( 1, 0.552941, 0.00392157, 1 )
+[node name="Candle2" parent="Lights" instance=ExtResource( 4 )]
+position = Vector2( 240, 8 )
 
-[node name="Candle" type="AnimatedSprite" parent="Node"]
-position = Vector2( 264, 104 )
-frames = SubResource( 10 )
-frame = 2
-playing = true
+[node name="Enemies" type="Node" parent="."]
 
-[node name="Light2D" type="Light2D" parent="Node/Candle"]
-scale = Vector2( 0.048, 0.048 )
-texture = ExtResource( 4 )
-color = Color( 1, 0.552941, 0.00392157, 1 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Node2D" parent="Enemies" instance=ExtResource( 7 )]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
