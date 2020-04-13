@@ -70,6 +70,7 @@ tile_data = PoolIntArray( 131093, 0, 0, 131094, 0, 0, 131095, 0, 0, 131098, 0, 0
 [node name="Lights" type="Node" parent="."]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [node name="Candle" parent="Lights" instance=ExtResource( 4 )]
 =======
 [node name="Candle2" type="AnimatedSprite" parent="Node"]
@@ -81,10 +82,24 @@ __meta__ = {
 "_edit_group_": true
 }
 >>>>>>> small changes to how the player moves and fights
+=======
+[node name="Candle2" type="AnimatedSprite" parent="Node"]
+position = Vector2( 504, 104 )
+frames = SubResource( 10 )
+frame = 6
+playing = true
+__meta__ = {
+"_edit_group_": true
+}
+=======
+[node name="Candle" parent="Lights" instance=ExtResource( 4 )]
+>>>>>>> a8ded837dd50ca0f87cca5f147aa469bf8f867ea
+>>>>>>> a02c0ba519f1d1256fe9f9401cd25be1719b0772
 
 [node name="Candle2" parent="Lights" instance=ExtResource( 4 )]
 position = Vector2( 240, 8 )
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 [node name="Enemies" type="Node" parent="."]
 =======
@@ -94,6 +109,16 @@ frames = SubResource( 10 )
 frame = 6
 playing = true
 >>>>>>> small changes to how the player moves and fights
+=======
+[node name="Candle" type="AnimatedSprite" parent="Node"]
+position = Vector2( 264, 104 )
+frames = SubResource( 10 )
+frame = 6
+playing = true
+=======
+[node name="Enemies" type="Node" parent="."]
+>>>>>>> a8ded837dd50ca0f87cca5f147aa469bf8f867ea
+>>>>>>> a02c0ba519f1d1256fe9f9401cd25be1719b0772
 
 [node name="Node2D" parent="Enemies" instance=ExtResource( 7 )]
 
