@@ -15,65 +15,37 @@ region = Rect2( 0, 0, 24, 24 )
 [sub_resource type="AtlasTexture" id=3]
 flags = 9
 atlas = ExtResource( 1 )
-<<<<<<< Updated upstream
-region = Rect2( 432, 0, 24, 24 )
-=======
 region = Rect2( 336, 0, 24, 24 )
->>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 9
 atlas = ExtResource( 1 )
-<<<<<<< Updated upstream
-region = Rect2( 456, 0, 24, 24 )
-=======
 region = Rect2( 360, 0, 24, 24 )
->>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 9
 atlas = ExtResource( 1 )
-<<<<<<< Updated upstream
-region = Rect2( 480, 0, 24, 24 )
-=======
 region = Rect2( 384, 0, 24, 24 )
->>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 9
 atlas = ExtResource( 1 )
-<<<<<<< Updated upstream
-region = Rect2( 504, 0, 24, 24 )
-=======
 region = Rect2( 240, 0, 24, 24 )
->>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 9
 atlas = ExtResource( 1 )
-<<<<<<< Updated upstream
-region = Rect2( 528, 0, 24, 24 )
-=======
 region = Rect2( 264, 0, 24, 24 )
->>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 9
 atlas = ExtResource( 1 )
-<<<<<<< Updated upstream
-region = Rect2( 552, 0, 24, 24 )
-=======
 region = Rect2( 288, 0, 24, 24 )
->>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 9
 atlas = ExtResource( 1 )
-<<<<<<< Updated upstream
-region = Rect2( 408, 0, 24, 24 )
-=======
 region = Rect2( 312, 0, 24, 24 )
->>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 9
@@ -118,65 +90,37 @@ region = Rect2( 0, 0, 24, 24 )
 [sub_resource type="AtlasTexture" id=18]
 flags = 9
 atlas = ExtResource( 1 )
-<<<<<<< Updated upstream
-region = Rect2( 240, 0, 24, 24 )
-=======
 region = Rect2( 408, 0, 24, 24 )
->>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id=19]
 flags = 9
 atlas = ExtResource( 1 )
-<<<<<<< Updated upstream
-region = Rect2( 264, 0, 24, 24 )
-=======
 region = Rect2( 432, 0, 24, 24 )
->>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id=20]
 flags = 9
 atlas = ExtResource( 1 )
-<<<<<<< Updated upstream
-region = Rect2( 288, 0, 24, 24 )
-=======
 region = Rect2( 456, 0, 24, 24 )
->>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id=21]
 flags = 9
 atlas = ExtResource( 1 )
-<<<<<<< Updated upstream
-region = Rect2( 312, 0, 24, 24 )
-=======
 region = Rect2( 480, 0, 24, 24 )
->>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id=22]
 flags = 9
 atlas = ExtResource( 1 )
-<<<<<<< Updated upstream
-region = Rect2( 336, 0, 24, 24 )
-=======
 region = Rect2( 504, 0, 24, 24 )
->>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id=23]
 flags = 9
 atlas = ExtResource( 1 )
-<<<<<<< Updated upstream
-region = Rect2( 360, 0, 24, 24 )
-=======
 region = Rect2( 528, 0, 24, 24 )
->>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id=24]
 flags = 9
 atlas = ExtResource( 1 )
-<<<<<<< Updated upstream
-region = Rect2( 384, 0, 24, 24 )
-=======
 region = Rect2( 552, 0, 24, 24 )
->>>>>>> Stashed changes
 
 [sub_resource type="SpriteFrames" id=25]
 animations = [ {
@@ -185,34 +129,16 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-<<<<<<< Updated upstream
-"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
-"loop": false,
-"name": "sprint",
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "hurt",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
-=======
-"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
->>>>>>> Stashed changes
-"loop": true,
-"name": "walking",
-"speed": 15.0
-}, {
-<<<<<<< Updated upstream
-"frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
-=======
 "frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
->>>>>>> Stashed changes
 "loop": true,
 "name": "attack",
 "speed": 10.0
 }, {
-<<<<<<< Updated upstream
-"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
-"loop": true,
-"name": "hurt",
-=======
 "frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
 "loop": true,
 "name": "walking",
@@ -221,7 +147,6 @@ animations = [ {
 "frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
 "loop": false,
 "name": "sprint",
->>>>>>> Stashed changes
 "speed": 5.0
 } ]
 
