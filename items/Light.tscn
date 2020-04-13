@@ -1,0 +1,68 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://spritesheet/0x72_16x16DungeonTileset.v4.png" type="Texture" id=1]
+[ext_resource path="res://images/shadows.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 9
+atlas = ExtResource( 1 )
+region = Rect2( 128, 153, 16, 17 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 9
+atlas = ExtResource( 1 )
+region = Rect2( 144, 153, 16, 17 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 9
+atlas = ExtResource( 1 )
+region = Rect2( 160, 153, 16, 17 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 9
+atlas = ExtResource( 1 )
+region = Rect2( 176, 153, 16, 17 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 9
+atlas = ExtResource( 1 )
+region = Rect2( 192, 153, 16, 17 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 9
+atlas = ExtResource( 1 )
+region = Rect2( 208, 153, 16, 17 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 9
+atlas = ExtResource( 1 )
+region = Rect2( 224, 153, 16, 17 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 9
+atlas = ExtResource( 1 )
+region = Rect2( 240, 153, 16, 17 )
+
+[sub_resource type="SpriteFrames" id=22]
+animations = [ {
+"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Candle" type="Node2D"]
+
+[node name="CandleSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 264, 104 )
+frames = SubResource( 22 )
+frame = 5
+playing = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Light2D" type="Light2D" parent="CandleSprite"]
+scale = Vector2( 0.048, 0.048 )
+texture = ExtResource( 2 )
+color = Color( 1, 0.552941, 0.00392157, 1 )
