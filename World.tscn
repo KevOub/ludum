@@ -224,7 +224,7 @@ tile_data = PoolIntArray( 131093, 0, 0, 131094, 0, 0, 131095, 0, 0, 131098, 0, 0
 [node name="Candle2" type="AnimatedSprite" parent="Node"]
 position = Vector2( 504, 104 )
 frames = SubResource( 10 )
-frame = 2
+frame = 6
 playing = true
 __meta__ = {
 "_edit_group_": true
@@ -238,7 +238,7 @@ color = Color( 1, 0.552941, 0.00392157, 1 )
 [node name="Candle" type="AnimatedSprite" parent="Node"]
 position = Vector2( 264, 104 )
 frames = SubResource( 10 )
-frame = 2
+frame = 6
 playing = true
 
 [node name="Light2D" type="Light2D" parent="Node/Candle"]
