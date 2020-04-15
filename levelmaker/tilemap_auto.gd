@@ -1,13 +1,13 @@
 extends TileMap
 
-enum TILES {Ground, Air}
+enum TILES {Air,Ground}
 
 export (int) var width = 50
 export (int) var height = 50
 
 var current_map_size = Vector2(width,height)
 var Candle = preload("res://items/Light.tscn")
-var Slinger = preload("res://enemies/enemies.tscn")
+var Slinger = preload("res://enemies/springer/springer.tscn")
 
 
 export (float, 0.0,100.0) var percentage_floors
@@ -26,17 +26,16 @@ func _ready():
 	for i in range(steps):
 		smooth_map()
 		update_bitmask_region()
-		
+	
 	add_sprites()	
 	player.position = place_player()
 		
 func make_map():
-	# create the world with only air first 
-	
-	#for x in range(0,current_map_size.x-1):
-	#	for y in range(0,current_map_size.y-1):
-	#		var num = rand_range(0.0,100.0)
-	#		set_cell(x,y,TILES.Air)
+	# create the boundary with air!
+	for x in range(0,current_map_size.x):
+		for y in range(0,current_map_size.y):
+			var num = rand_range(0.0,100.0)
+			set_cell(x,y,TILES.Air)
 							
 	# Set core of map
 	for x in range(1,current_map_size.x-1):
@@ -73,7 +72,7 @@ func add_sprites():
 			
 			var num = rand_range(0.0,100.0)
 			
-			if get_cell(x,y) == TILES.Ground and number_of_neighbors_walls == 5:
+			if get_cell(x,y) == TILES.Ground and number_of_neighbors_walls >= 5 and number_of_neighbors_walls <= 7:
 				# candles go here
 				if num < percentage_candles:
 					var candle = Candle.instance()
@@ -101,7 +100,7 @@ func place_player():
 			if get_cell(random_x+direction.x,random_y+direction.y) == TILES.Ground:
 				number_of_neighbors_walls += 1
 							
-		if get_cell(coords.x,coords.y) == TILES.Ground and number_of_neighbors_walls == 8:
+		if get_cell(coords.x,coords.y) == TILES.Ground and number_of_neighbors_walls >= 5:
 			break
 	return map_to_world(coords)
 	
