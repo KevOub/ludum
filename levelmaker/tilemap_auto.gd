@@ -8,11 +8,14 @@ export (int) var height = 50
 var current_map_size = Vector2(width,height)
 var Candle = preload("res://items/Light.tscn")
 var Slinger = preload("res://enemies/springer/springer.tscn")
+var CommonChest = preload("res://items/chests/CommonChest.tscn")
+var RareChest = preload("res://items/chests/RareChest.tscn")
 
 
 export (float, 0.0,100.0) var percentage_floors
 export (float, 0.0,100.0) var percentage_candles
-export (float, 0.0,100.0) var percentage_chests
+export (float, 0.0,100.0) var percentage_ok_chests
+export (float, 0.0,100.0) var percentage_good_chests
 export (float, 0.0,100.0) var percentage_enemies
 export (int) var steps
 
@@ -61,7 +64,12 @@ func smooth_map():
 	
 			elif number_of_neighbors_walls > 4:
 				set_cell(x,y,TILES.Air)
+
+func create_sprite_at(sprite,x,y):
+	add_child(sprite)
+	sprite.global_position = map_to_world(Vector2(x,y))
 				
+	
 func add_sprites():
 	for x in range(1,current_map_size.x-1):
 		for y in range(1,current_map_size.y-1):
@@ -76,17 +84,28 @@ func add_sprites():
 				# candles go here
 				if num < percentage_candles:
 					var candle = Candle.instance()
-					add_child(candle)
-					candle.global_position = map_to_world(Vector2(x,y))
+					create_sprite_at(candle,x,y)
+
 					
 			if get_cell(x,y) == TILES.Ground and number_of_neighbors_walls == 8:
 				# since all the blocks are solid
 				# enemies go here
+				
 				if num < percentage_enemies:
 					var slinger = Slinger.instance()
-					add_child(slinger)
-					slinger.global_position = map_to_world(Vector2(x,y))
+					create_sprite_at(slinger,x,y)
+					continue
 
+
+				if num < percentage_ok_chests:
+					var chest = CommonChest.instance()
+					create_sprite_at(chest,x,y)
+					continue
+					
+				if num < percentage_good_chests:
+					var chest = RareChest.instance()
+					create_sprite_at(chest,x,y)
+					continue
 
 func place_player():
 	var coords = Vector2()

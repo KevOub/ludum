@@ -3,10 +3,10 @@
 [ext_resource path="res://spritesheet/DinoSprites - vita.png" type="Texture" id=1]
 [ext_resource path="res://player/Player.gd" type="Script" id=2]
 [ext_resource path="res://images/shadows.png" type="Texture" id=3]
-[ext_resource path="res://images/grainy_shadows.png" type="Texture" id=4]
+[ext_resource path="res://images/light.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 157.311, 119.602 )
+extents = Vector2( 129.456, 101.741 )
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 9
@@ -16,112 +16,112 @@ region = Rect2( 0, 0, 24, 24 )
 [sub_resource type="AtlasTexture" id=3]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 48, 0, 24, 24 )
+region = Rect2( 336, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 96, 0, 24, 24 )
+region = Rect2( 360, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 120, 0, 24, 24 )
+region = Rect2( 384, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 144, 0, 24, 24 )
+region = Rect2( 408, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 168, 0, 24, 24 )
+region = Rect2( 432, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 192, 0, 24, 24 )
+region = Rect2( 456, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 216, 0, 24, 24 )
+region = Rect2( 480, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 24, 24 )
+region = Rect2( 504, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 240, 0, 24, 24 )
+region = Rect2( 528, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 264, 0, 24, 24 )
+region = Rect2( 552, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 288, 0, 24, 24 )
+region = Rect2( 240, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 312, 0, 24, 24 )
+region = Rect2( 264, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 408, 0, 24, 24 )
+region = Rect2( 288, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 432, 0, 24, 24 )
+region = Rect2( 312, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 456, 0, 24, 24 )
+region = Rect2( 48, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=18]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 480, 0, 24, 24 )
+region = Rect2( 96, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=19]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 504, 0, 24, 24 )
+region = Rect2( 120, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=20]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 528, 0, 24, 24 )
+region = Rect2( 144, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=21]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 552, 0, 24, 24 )
+region = Rect2( 168, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=22]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 336, 0, 24, 24 )
+region = Rect2( 192, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=23]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 360, 0, 24, 24 )
+region = Rect2( 216, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=24]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 384, 0, 24, 24 )
+region = Rect2( 0, 0, 24, 24 )
 
 [sub_resource type="SpriteFrames" id=25]
 animations = [ {
@@ -130,25 +130,25 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
 "loop": true,
-"name": "walking",
-"speed": 15.0
+"name": "hurt",
+"speed": 5.0
 }, {
-"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
-"loop": true,
-"name": "attack",
-"speed": 10.0
-}, {
-"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
 "loop": false,
 "name": "sprint",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
+"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
 "loop": true,
-"name": "hurt",
-"speed": 5.0
+"name": "attack",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
+"loop": true,
+"name": "walking",
+"speed": 15.0
 } ]
 
 [sub_resource type="OccluderPolygon2D" id=26]
@@ -183,15 +183,15 @@ scale = Vector2( 19.6069, 13.1268 )
 texture = ExtResource( 3 )
 mode = 3
 shadow_enabled = true
-shadow_gradient_length = 25.0
 shadow_filter = 1
 
 [node name="Light" type="Light2D" parent="Player"]
-position = Vector2( -1.90735e-05, 0.000131607 )
-scale = Vector2( 0.914419, 0.621187 )
+visible = false
+position = Vector2( -19.1469, -109.506 )
+scale = Vector2( 7.73995, 4.06617 )
+z_as_relative = false
 texture = ExtResource( 4 )
-color = Color( 0.886275, 1, 0.682353, 1 )
-energy = 0.2
+shadow_enabled = true
 shadow_color = Color( 0.00392157, 0.00392157, 0.00392157, 0 )
 shadow_filter = 1
 shadow_filter_smooth = 2.1

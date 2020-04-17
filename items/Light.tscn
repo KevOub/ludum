@@ -57,11 +57,8 @@ animations = [ {
 position = Vector2( 8, 8 )
 scale = Vector2( 1, 0.941176 )
 frames = SubResource( 9 )
-frame = 1
+frame = 7
 playing = true
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Light2D" type="Light2D" parent="CandleSprite"]
 position = Vector2( -9.53674e-07, 2.86102e-06 )
