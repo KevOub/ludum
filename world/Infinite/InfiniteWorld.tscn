@@ -62,6 +62,7 @@ points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
 [node name="InfiniteWorld" type="Node"]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color( 0.184314, 0.184314, 0.184314, 1 )
 
 [node name="TileMap" type="TileMap" parent="."]
