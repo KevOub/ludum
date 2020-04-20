@@ -152,6 +152,7 @@ animations = [ {
 } ]
 
 [sub_resource type="OccluderPolygon2D" id=26]
+closed = false
 polygon = PoolVector2Array( -5.78839, -3.00859, 4.73138, -2.88184, 9.92789, -20.2458, 3.96793, -20.2835, -10.0977, -20.3725 )
 
 [node name="Player" type="Node2D"]
@@ -178,6 +179,7 @@ rotating = true
 current = true
 
 [node name="Shadow" type="Light2D" parent="Player"]
+visible = false
 position = Vector2( -19.1472, -6.95306 )
 scale = Vector2( 19.6069, 13.1268 )
 texture = ExtResource( 3 )
@@ -186,11 +188,11 @@ shadow_enabled = true
 shadow_filter = 1
 
 [node name="Light" type="Light2D" parent="Player"]
-visible = false
-position = Vector2( -19.1469, -109.506 )
-scale = Vector2( 7.73995, 4.06617 )
+position = Vector2( -19.1472, -6.95288 )
+scale = Vector2( 3.59611, 2.40669 )
 z_as_relative = false
 texture = ExtResource( 4 )
+energy = 0.8
 shadow_enabled = true
 shadow_color = Color( 0.00392157, 0.00392157, 0.00392157, 0 )
 shadow_filter = 1

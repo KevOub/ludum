@@ -8,6 +8,8 @@ export (int) var height = 50
 var current_map_size = Vector2(width,height)
 var Candle = preload("res://items/Light.tscn")
 var Slinger = preload("res://enemies/springer/springer.tscn")
+var Groot = preload("res://enemies/groot/groot.tscn")
+var WeakZombie = preload("res://enemies/weak_zombie/zombie.tscn")
 var CommonChest = preload("res://items/chests/CommonChest.tscn")
 var RareChest = preload("res://items/chests/RareChest.tscn")
 
@@ -85,8 +87,8 @@ func add_sprites():
 				if num < percentage_candles:
 					var candle = Candle.instance()
 					create_sprite_at(candle,x,y)
-
 					
+			# TODO improve random number generation
 			if get_cell(x,y) == TILES.Ground and number_of_neighbors_walls == 8:
 				# since all the blocks are solid
 				# enemies go here
@@ -95,7 +97,6 @@ func add_sprites():
 					var slinger = Slinger.instance()
 					create_sprite_at(slinger,x,y)
 					continue
-
 
 				if num < percentage_ok_chests:
 					var chest = CommonChest.instance()
