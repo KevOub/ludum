@@ -10,7 +10,8 @@ onready var sprite = get_node("Body")
 
 func get_input():
 	velocity = Vector2()
-
+	if Input.is_action_pressed("Escape"):
+		get_tree().quit()
 	if Input.is_action_pressed("up"):
 		if Input.is_action_pressed("action_1"):
 			velocity.y = 0
