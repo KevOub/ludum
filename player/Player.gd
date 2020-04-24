@@ -6,12 +6,12 @@ var turn_speed = 3
 var velocity = Vector2()
 var direction = "right"
 onready var sprite = get_node("Body")
-
+export (String,FILE,"*.tscn") var QuitMenu 
 
 func get_input():
 	velocity = Vector2()
 	if Input.is_action_pressed("Escape"):
-		get_tree().quit()
+		get_tree().change_scene(QuitMenu)
 	if Input.is_action_pressed("up"):
 		if Input.is_action_pressed("action_1"):
 			velocity.y = 0
