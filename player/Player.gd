@@ -7,7 +7,7 @@ var velocity = Vector2()
 var direction = "right"
 onready var sprite = get_node("Body")
 
-
+	
 func get_input():
 	velocity = Vector2()
 	if Input.is_action_pressed("Escape"):
@@ -68,3 +68,5 @@ func _physics_process(delta):
 
 	get_input()
 	velocity = move_and_slide(velocity)
+	position
+

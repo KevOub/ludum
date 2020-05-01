@@ -6,12 +6,12 @@
 [sub_resource type="AtlasTexture" id=1]
 flags = 9
 atlas = ExtResource( 2 )
-region = Rect2( 48, 192, 16, 16 )
+region = Rect2( 50, 192, 10, 16 )
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 9
 atlas = ExtResource( 2 )
-region = Rect2( 48, 208, 16, 16 )
+region = Rect2( 50, 208, 10, 16 )
 
 [sub_resource type="SpriteFrames" id=3]
 resource_local_to_scene = true
@@ -22,7 +22,8 @@ animations = [ {
 "speed": 1.0
 } ]
 
-[node name="Node2D" instance=ExtResource( 1 )]
+[node name="Springer" instance=ExtResource( 1 )]
 
-[node name="AnimatedSprite" parent="KinematicBody2D" index="0"]
+[node name="AnimatedSprite" parent="." index="0"]
 frames = SubResource( 3 )
+frame = 1
