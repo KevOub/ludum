@@ -15,8 +15,8 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
 func _on_No_button_up():
+# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://world/Infinite/InfiniteWorld.tscn")
 
 

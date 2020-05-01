@@ -6,8 +6,13 @@ var turn_speed = 3
 var velocity = Vector2()
 var direction = "right"
 onready var sprite = get_node("Body")
+# <<<<<<< HEAD
 export (String,FILE,"*.tscn") var QuitMenu 
 
+#=======
+
+	
+#>>>>>>> 48fd9a26f85f7cd4bf3f41603baf50f1b8d51bf7
 func get_input():
 	velocity = Vector2()
 	if Input.is_action_pressed("Escape"):
@@ -68,3 +73,5 @@ func _physics_process(delta):
 
 	get_input()
 	velocity = move_and_slide(velocity)
+	position
+

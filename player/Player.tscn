@@ -51,77 +51,77 @@ region = Rect2( 552, 0, 24, 24 )
 [sub_resource type="AtlasTexture" id=10]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 240, 0, 24, 24 )
+region = Rect2( 48, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 264, 0, 24, 24 )
+region = Rect2( 96, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 288, 0, 24, 24 )
+region = Rect2( 120, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 312, 0, 24, 24 )
+region = Rect2( 144, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 48, 0, 24, 24 )
+region = Rect2( 168, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 96, 0, 24, 24 )
+region = Rect2( 192, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 120, 0, 24, 24 )
+region = Rect2( 216, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 144, 0, 24, 24 )
+region = Rect2( 0, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=18]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 168, 0, 24, 24 )
+region = Rect2( 336, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=19]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 192, 0, 24, 24 )
+region = Rect2( 360, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=20]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 216, 0, 24, 24 )
+region = Rect2( 384, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=21]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 24, 24 )
+region = Rect2( 240, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=22]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 336, 0, 24, 24 )
+region = Rect2( 264, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=23]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 360, 0, 24, 24 )
+region = Rect2( 288, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=24]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 384, 0, 24, 24 )
+region = Rect2( 312, 0, 24, 24 )
 
 [sub_resource type="SpriteFrames" id=25]
 animations = [ {
@@ -135,51 +135,49 @@ animations = [ {
 "name": "sprint",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
-"loop": true,
-"name": "attack",
-"speed": 10.0
-}, {
-"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
 "loop": true,
 "name": "walking",
 "speed": 15.0
 }, {
-"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
+"frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
 "loop": true,
 "name": "hurt",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
+"loop": true,
+"name": "attack",
+"speed": 10.0
 } ]
 
 [sub_resource type="OccluderPolygon2D" id=26]
 closed = false
 polygon = PoolVector2Array( -5.78839, -3.00859, 4.73138, -2.88184, 9.92789, -20.2458, 3.96793, -20.2835, -10.0977, -20.3725 )
 
-[node name="Player" type="Node2D"]
-
-[node name="Player" type="KinematicBody2D" parent="."]
+[node name="Player" type="KinematicBody2D"]
 position = Vector2( 0.999984, 0.542381 )
 scale = Vector2( 0.0522266, 0.0780081 )
 script = ExtResource( 2 )
 QuitMenu = "QuitMenu.tscn"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 0.00012207 )
 shape = SubResource( 1 )
 
-[node name="Body" type="AnimatedSprite" parent="Player"]
+[node name="Body" type="AnimatedSprite" parent="."]
 position = Vector2( 0, 0.00012207 )
 scale = Vector2( 19.0504, 12.9414 )
 frames = SubResource( 25 )
 animation = "attack"
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0, 0.00012207 )
 scale = Vector2( 2.26164, 2.07421 )
 rotating = true
 current = true
 
-[node name="Shadow" type="Light2D" parent="Player"]
+[node name="Shadow" type="Light2D" parent="."]
 visible = false
 position = Vector2( -19.1472, -6.95306 )
 scale = Vector2( 19.6069, 13.1268 )
@@ -188,7 +186,7 @@ mode = 3
 shadow_enabled = true
 shadow_filter = 1
 
-[node name="Light" type="Light2D" parent="Player"]
+[node name="Light" type="Light2D" parent="."]
 visible = false
 position = Vector2( -19.1472, -6.95288 )
 scale = Vector2( 3.59611, 2.40669 )
@@ -200,8 +198,10 @@ shadow_color = Color( 0.00392157, 0.00392157, 0.00392157, 0 )
 shadow_filter = 1
 shadow_filter_smooth = 2.1
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="Player"]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 visible = false
 position = Vector2( -2.32568, 152.364 )
 scale = Vector2( 19.1473, 12.8192 )
 occluder = SubResource( 26 )
+
+[node name="Player" type="Node2D" parent="."]

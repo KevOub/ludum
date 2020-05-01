@@ -79,5 +79,5 @@ percentage_good_chests = 0.124
 percentage_enemies = 0.75
 steps = 10
 
-[node name="Player" parent="." instance=ExtResource( 3 )]
+[node name="Player" parent="TileMap" instance=ExtResource( 3 )]
 position = Vector2( 24, 24 )

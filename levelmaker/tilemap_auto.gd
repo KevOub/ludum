@@ -25,16 +25,28 @@ var neighbor_dir = [Vector2(1,0),Vector2(1,1),Vector2(0,1),Vector2(-1,0),
 Vector2(-1,-1),Vector2(0,-1),Vector2(1,-1),Vector2(-1,1)]
 
 func _ready():
-	var player = get_tree().root.get_node("InfiniteWorld/Player")
+	var player = get_node("Player")
 	randomize()
 	make_map()
 	for i in range(steps):
 		smooth_map()
 		update_bitmask_region()
 	
-	add_sprites()	
+	add_sprites()
+	
 	player.position = place_player()
-		
+	#sgetallnodes(get_tree().root.get_node("InfiniteWorld/TileMap"))
+
+func getallnodes(node):
+	for N in node.get_children():
+		if N.get_child_count() > 0:
+			print("["+N.get_name()+"]")
+			getallnodes(N)
+		else:
+			# Do something
+			print("- "+N.get_name())
+
+
 func make_map():
 	# create the boundary with air!
 	for x in range(0,current_map_size.x):
@@ -68,13 +80,14 @@ func smooth_map():
 				set_cell(x,y,TILES.Air)
 
 func create_sprite_at(sprite,x,y):
-	add_child(sprite)
+	self.add_child(sprite)
+	print(sprite.get_name())
 	sprite.global_position = map_to_world(Vector2(x,y))
 				
 	
 func add_sprites():
 	for x in range(1,current_map_size.x-1):
-		for y in range(1,current_map_size.y-1):
+		for y in range(1,current_map_size.y-1):	
 			var number_of_neighbors_walls = 0
 			for direction in neighbor_dir:
 				if get_cell(x+direction.x,y+direction.y) == TILES.Ground:
@@ -95,17 +108,8 @@ func add_sprites():
 				
 				if num < percentage_enemies:
 					var slinger = Slinger.instance()
-					create_sprite_at(slinger,x,y)
-					continue
 
-				if num < percentage_ok_chests:
-					var chest = CommonChest.instance()
-					create_sprite_at(chest,x,y)
-					continue
-					
-				if num < percentage_good_chests:
-					var chest = RareChest.instance()
-					create_sprite_at(chest,x,y)
+					create_sprite_at(slinger,x,y)
 					continue
 
 func place_player():
