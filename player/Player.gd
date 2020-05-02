@@ -6,14 +6,14 @@ var turn_speed = 3
 var velocity = Vector2()
 var direction = "right"
 onready var sprite = get_node("Body")
-<<<<<<< HEAD
+#<<<<<<< HEAD
 # <<<<<<< HEAD
 export (String,FILE,"*.tscn") var QuitMenu 
 
 #=======
 
-=======
->>>>>>> 8740685f82573f873ed4b5202b83856bd7863d7f
+#=======
+#>>>>>>> 8740685f82573f873ed4b5202b83856bd7863d7f
 	
 #>>>>>>> 48fd9a26f85f7cd4bf3f41603baf50f1b8d51bf7
 func get_input():

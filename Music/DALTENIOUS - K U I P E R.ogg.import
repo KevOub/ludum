@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/DALTENIOUS - K U I P E R.ogg-f13f293b2d8369ce2a62f9cfa6006236.oggstr"
+
+[deps]
+
+source_file="res://Music/DALTENIOUS - K U I P E R.ogg"
+dest_files=[ "res://.import/DALTENIOUS - K U I P E R.ogg-f13f293b2d8369ce2a62f9cfa6006236.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
