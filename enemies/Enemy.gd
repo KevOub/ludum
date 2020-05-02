@@ -1,11 +1,15 @@
 extends KinematicBody2D
 
-var speed = 10
+var speed = 0
+export var steps = 30
+export var seeing_distance = 80
+
 var velocity = Vector2.ZERO
 
 
 var player = null
 var target = null
+onready var label = get_node("Label")
 
 func _ready():
 	player = get_node("../Player")
@@ -23,15 +27,14 @@ func _ready():
 func _physics_process(delta):
 	velocity = Vector2.ZERO
 	if player:
-		velocity = position.direction_to(player.position) * speed
-
+		var dist = position.distance_to(player.position)
+		if dist < seeing_distance:
+			velocity += (position.direction_to(player.position) / steps) * speed
 	velocity = move_and_collide(velocity)
+	
 
 
-func _on_Area2D_body_entered(body):
 
-	print("FIRE!")
-	player = body
-
-func _on_Area2D_body_exited(body):
-	player = null
+func _on_Timer_timeout():
+	speed = 35
+	

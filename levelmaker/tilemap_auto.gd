@@ -14,6 +14,8 @@ var CommonChest = preload("res://items/chests/CommonChest.tscn")
 var RareChest = preload("res://items/chests/RareChest.tscn")
 
 
+var player = null
+
 export (float, 0.0,100.0) var percentage_floors
 export (float, 0.0,100.0) var percentage_candles
 export (float, 0.0,100.0) var percentage_ok_chests
@@ -25,7 +27,7 @@ var neighbor_dir = [Vector2(1,0),Vector2(1,1),Vector2(0,1),Vector2(-1,0),
 Vector2(-1,-1),Vector2(0,-1),Vector2(1,-1),Vector2(-1,1)]
 
 func _ready():
-	var player = get_node("Player")
+	player = get_node("Player")
 	randomize()
 	make_map()
 	for i in range(steps):
@@ -36,6 +38,10 @@ func _ready():
 	
 	player.position = place_player()
 	#sgetallnodes(get_tree().root.get_node("InfiniteWorld/TileMap"))
+
+func _process(delta):
+	pass
+
 
 func getallnodes(node):
 	for N in node.get_children():
@@ -80,8 +86,8 @@ func smooth_map():
 				set_cell(x,y,TILES.Air)
 
 func create_sprite_at(sprite,x,y):
+	
 	self.add_child(sprite)
-	print(sprite.get_name())
 	sprite.global_position = map_to_world(Vector2(x,y))
 				
 	

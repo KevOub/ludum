@@ -6,7 +6,6 @@ var turn_speed = 3
 var velocity = Vector2()
 var direction = "right"
 onready var sprite = get_node("Body")
-
 	
 func get_input():
 	velocity = Vector2()
@@ -65,8 +64,9 @@ func get_input():
 
 # warning-ignore:unused_argument
 func _physics_process(delta):
-
 	get_input()
 	velocity = move_and_slide(velocity)
-	position
+	
+	
+		
 
