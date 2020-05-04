@@ -23,6 +23,8 @@ animations = [ {
 } ]
 
 [node name="Node2D" instance=ExtResource( 1 )]
+steps = 50
+seeing_distance = 100
 
-[node name="AnimatedSprite" parent="KinematicBody2D" index="0"]
+[node name="AnimatedSprite" parent="." index="1"]
 frames = SubResource( 3 )

@@ -114,8 +114,24 @@ func add_sprites():
 				
 				if num < percentage_enemies:
 					var slinger = Slinger.instance()
-
 					create_sprite_at(slinger,x,y)
+					continue
+				
+				if num < (percentage_enemies + (percentage_enemies * rand_range(0,1))):
+					var groot = Groot.instance()
+					create_sprite_at(groot,x,y)
+					continue
+					
+				
+				if num < (percentage_ok_chests):
+					var chest = CommonChest.instance()
+					create_sprite_at(chest,x,y)
+					continue
+				
+				
+				if num < (percentage_good_chests):
+					var chest = RareChest.instance()
+					create_sprite_at(chest,x,y)
 					continue
 
 func place_player():
