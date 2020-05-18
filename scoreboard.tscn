@@ -1,12 +1,21 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Score.gd" type="Script" id=1]
+[ext_resource path="res://fonts/Antreas.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
 
 [node name="GUI" type="CanvasLayer"]
 
 [node name="Score" type="Label" parent="."]
 margin_right = 40.0
 margin_bottom = 14.0
+custom_fonts/font = SubResource( 1 )
+custom_constants/shadow_offset_x = 1
 text = "SCORE: "
 script = ExtResource( 1 )
 __meta__ = {
@@ -17,6 +26,7 @@ __meta__ = {
 margin_left = 49.0
 margin_right = 89.0
 margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
 text = "000000"
 __meta__ = {
 "_edit_use_anchors_": false

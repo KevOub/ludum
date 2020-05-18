@@ -1,14 +1,16 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://fonts/Antreas.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://titlescreen/back.gd" type="Script" id=2]
 [ext_resource path="res://titlescreen/fullscreen.gd" type="Script" id=3]
+[ext_resource path="res://titlescreen/audiotoggle.gd" type="Script" id=4]
+[ext_resource path="res://Music/DALTENIOUS - K U I P E R.ogg" type="AudioStream" id=5]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 25
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=2]
 size = 19
 font_data = ExtResource( 1 )
 
@@ -16,7 +18,7 @@ font_data = ExtResource( 1 )
 size = 24
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=4]
 size = 35
 font_data = ExtResource( 1 )
 
@@ -27,6 +29,10 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -43,7 +49,7 @@ margin_left = 14.4993
 margin_top = 225.0
 margin_right = 58.4993
 margin_bottom = 261.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_constants/hseparation = 0
 text = "back"
 __meta__ = {
@@ -63,7 +69,7 @@ __meta__ = {
 margin_top = 8.0
 margin_right = 62.0
 margin_bottom = 32.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 2
 text = "FullScreen"
@@ -83,12 +89,45 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect"]
+margin_left = 10.0
+margin_top = 90.0
+margin_right = 150.0
+margin_bottom = 85.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect/HBoxContainer2"]
+margin_top = 8.0
+margin_right = 31.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+text = "Mute"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckButton" type="CheckButton" parent="ColorRect/HBoxContainer2"]
+margin_left = 35.0
+margin_right = 111.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 3 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Label" type="Label" parent="ColorRect"]
 margin_left = 7.49934
 margin_top = 3.49963
 margin_right = 80.4993
 margin_bottom = 45.4996
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 0
 custom_constants/shadow_offset_y = 2
