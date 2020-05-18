@@ -76,15 +76,17 @@ func shoot():
 # warning-ignore:unused_argument
 func _physics_process(delta):
 	get_input()
-	
+	if $HealthBar.current == 0:
+		# DEATH MODE
+		pass
 	
 	var collision  = move_and_collide(velocity * delta)
 	if collision:
 		print($Health.current)
 		if "Springer" in collision.collider.name:
-			$Health.set_current(5)
+			$HealthBar.set_current(2)
 		if "Springer" in collision.collider.name:
-			$Health.set_current(5)
+			$HealthBar.set_current(2)
 				
 		if "Chest" in collision.collider.name:
 			get_parent().get_node("GUI/Score").adjust(100)
