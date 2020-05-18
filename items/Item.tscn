@@ -12,13 +12,15 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Node2D" type="Node2D"]
+[node name="Item" type="Node2D"]
 position = Vector2( 8, 8 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 23
+collision_mask = 23
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 scale = Vector2( 1.00402, 1 )

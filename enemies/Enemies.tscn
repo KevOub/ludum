@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://enemies/Enemy.gd" type="Script" id=1]
 
@@ -15,11 +15,9 @@ animations = [ {
 radius = 4.84262
 height = 4.34986
 
-[sub_resource type="CircleShape2D" id=3]
-radius = 32.0
-
 [node name="Enemy" type="KinematicBody2D"]
-collision_layer = 3
+collision_layer = 31
+collision_mask = 31
 script = ExtResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]
@@ -36,17 +34,4 @@ playing = true
 position = Vector2( 8, 8 )
 scale = Vector2( 1.652, 1.14 )
 shape = SubResource( 2 )
-
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 8, 8 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 3 )
-disabled = true
-one_way_collision = true
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
-[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

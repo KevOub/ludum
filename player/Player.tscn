@@ -18,97 +18,97 @@ region = Rect2( 0, 0, 24, 24 )
 [sub_resource type="AtlasTexture" id=3]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 408, 0, 24, 24 )
+region = Rect2( 48, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 432, 0, 24, 24 )
+region = Rect2( 96, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 456, 0, 24, 24 )
+region = Rect2( 120, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 480, 0, 24, 24 )
+region = Rect2( 144, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 504, 0, 24, 24 )
+region = Rect2( 168, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 528, 0, 24, 24 )
+region = Rect2( 192, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 552, 0, 24, 24 )
+region = Rect2( 216, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 48, 0, 24, 24 )
+region = Rect2( 0, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 96, 0, 24, 24 )
+region = Rect2( 240, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 120, 0, 24, 24 )
+region = Rect2( 264, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 144, 0, 24, 24 )
+region = Rect2( 288, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 168, 0, 24, 24 )
+region = Rect2( 312, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 192, 0, 24, 24 )
+region = Rect2( 408, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 216, 0, 24, 24 )
+region = Rect2( 432, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 24, 24 )
+region = Rect2( 456, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=18]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 240, 0, 24, 24 )
+region = Rect2( 480, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=19]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 264, 0, 24, 24 )
+region = Rect2( 504, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=20]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 288, 0, 24, 24 )
+region = Rect2( 528, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=21]
 flags = 9
 atlas = ExtResource( 1 )
-region = Rect2( 312, 0, 24, 24 )
+region = Rect2( 552, 0, 24, 24 )
 
 [sub_resource type="AtlasTexture" id=22]
 flags = 9
@@ -132,20 +132,20 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
-"loop": false,
-"name": "sprint",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
 "loop": true,
 "name": "walking",
 "speed": 15.0
 }, {
-"frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
 "loop": true,
 "name": "attack",
 "speed": 10.0
+}, {
+"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+"loop": false,
+"name": "sprint",
+"speed": 5.0
 }, {
 "frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
 "loop": true,
@@ -160,6 +160,8 @@ polygon = PoolVector2Array( -5.78839, -3.00859, 4.73138, -2.88184, 9.92789, -20.
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 0.999984, 0.542381 )
 scale = Vector2( 0.0522266, 0.0780081 )
+collision_layer = 32
+collision_mask = 47
 script = ExtResource( 2 )
 QuitMenu = "QuitMenu.tscn"
 
@@ -208,11 +210,11 @@ occluder = SubResource( 26 )
 
 [node name="Player" type="Node2D" parent="."]
 
-[node name="Health" parent="." instance=ExtResource( 5 )]
-position = Vector2( -446.942, -225.428 )
+[node name="HealthBar" parent="." instance=ExtResource( 6 )]
+margin_left = -229.0
+margin_top = -212.0
+margin_right = 287.0
+margin_bottom = -155.0
 
-[node name="HealthBar" parent="Health" instance=ExtResource( 6 )]
-margin_right = 859.0
-margin_bottom = 102.0
-[connection signal="changed" from="Health" to="Health/HealthBar" method="set_value"]
-[connection signal="max_changed" from="Health" to="Health/HealthBar" method="set_max"]
+[node name="Health" parent="." instance=ExtResource( 5 )]
+visible = false
