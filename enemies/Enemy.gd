@@ -14,6 +14,7 @@ onready var label = get_node("Label")
 func _ready():
 	player = get_node("../Player")
 	
+	
 
 #func _physics_process(delta):
 #	if player != null:
@@ -37,7 +38,6 @@ func _physics_process(delta):
 			velocity += (position.direction_to(player.position) / steps) * speed
 	velocity = move_and_collide(velocity)
 	
-
 
 
 func _on_Timer_timeout():

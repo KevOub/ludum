@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
-var speed = 75
+var speed = 126
 var velocity = Vector2()
-
+var off = false
 
 func start(pos, dir):
 	rotation = dir
@@ -13,20 +13,20 @@ func _physics_process(delta):
 	
 	var collision = move_and_collide(velocity * delta)
 	rotation += 0.124
-	if collision:
+	if collision and not off:
+		var timer = get_node("DeathClock")
 
 		if "Springer" in collision.collider.name :
 			get_parent().get_node("GUI/Score").adjust(5)
-			queue_free()
+			off = true
+			self.hide()
 		if "Groot" in collision.collider.name :
 			get_parent().get_node("GUI/Score").adjust(5)
-			
-			queue_free()
-		if "Player" in collision.collider.name:
-			pass
-			
-
-
+			off = true
+			self.hide()
+		
+		else:
+			off = true
 
 func _on_Timer_timeout():
 	queue_free()

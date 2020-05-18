@@ -6,18 +6,10 @@ var Bullet = preload("res://player/Bullet.tscn")
 var velocity = Vector2()
 var direction = "right"
 onready var sprite = get_node("Body")
+
 export (String,FILE,"*.tscn") var QuitMenu 
-func _ready():
-	var player_health = $Health
-	var healthbar = $Health/HealthBar
-	player_health.connect("changed",healthbar,"set_value")
-	player_health.connect("max_changed",healthbar,"set_max")
-	player_health.initialize()
-	
+
 func get_input():
-	#var collision = move_and_collide(velocity)
-	#if "Springer" in collision.collider.name:
-	#	player_health.set_current(-10)
 	velocity = Vector2()
 	if Input.is_action_pressed("Escape"):
 		get_tree().change_scene(QuitMenu)
@@ -84,17 +76,20 @@ func shoot():
 # warning-ignore:unused_argument
 func _physics_process(delta):
 	get_input()
-	
+	if $HealthBar.current == 0:
+		# DEATH MODE
+		pass
 	
 	var collision  = move_and_collide(velocity * delta)
 	if collision:
-		print(collision.collider.name)
+		print($Health.current)
+		if "Springer" in collision.collider.name:
+			$HealthBar.set_current(2)
+		if "Springer" in collision.collider.name:
+			$HealthBar.set_current(2)
+				
 		if "Chest" in collision.collider.name:
 			get_parent().get_node("GUI/Score").adjust(100)
 
 
 	
-
-
-func _on_Health_changed(new_amount):
-	pass # Replace with function body.

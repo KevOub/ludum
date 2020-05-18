@@ -52,13 +52,14 @@ animations = [ {
 } ]
 
 [node name="Candle" type="Node2D"]
+z_index = -1
 
 [node name="CandleSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 8, 8 )
 scale = Vector2( 1, 0.941176 )
+z_index = 1
 frames = SubResource( 9 )
-frame = 7
-playing = true
+frame = 1
 
 [node name="Light2D" type="Light2D" parent="CandleSprite"]
 position = Vector2( -9.53674e-07, 2.86102e-06 )
