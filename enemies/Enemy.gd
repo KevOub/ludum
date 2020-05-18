@@ -26,6 +26,11 @@ func _ready():
 
 func _physics_process(delta):
 	velocity = Vector2.ZERO
+	var collision = move_and_collide(velocity * delta)
+	if collision:
+		if "Bullet" in collision.collider.name:
+			queue_free()
+			
 	if player:
 		var dist = position.distance_to(player.position)
 		if dist < seeing_distance:
