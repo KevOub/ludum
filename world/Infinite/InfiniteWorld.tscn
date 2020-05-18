@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://levelmaker/tilemap_auto.gd" type="Script" id=1]
 [ext_resource path="res://spritesheet/0x72_16x16DungeonTileset.v4.png" type="Texture" id=2]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Music/DALTENIOUS - K U I P E R.ogg" type="AudioStream" id=4]
+[ext_resource path="res://scoreboard.tscn" type="PackedScene" id=5]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 closed = false
@@ -79,6 +80,8 @@ percentage_ok_chests = 0.95
 percentage_good_chests = 0.124
 percentage_enemies = 0.75
 steps = 10
+
+[node name="GUI" parent="TileMap" instance=ExtResource( 5 )]
 
 [node name="Player" parent="TileMap" instance=ExtResource( 3 )]
 position = Vector2( 24, 24 )

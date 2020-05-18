@@ -19,6 +19,7 @@ height = 4.34986
 radius = 32.0
 
 [node name="Enemy" type="KinematicBody2D"]
+collision_layer = 3
 script = ExtResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]

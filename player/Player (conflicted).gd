@@ -69,20 +69,15 @@ func get_input():
 func shoot():
 	var b = Bullet.instance()
 	var dir = get_local_mouse_position()
-	
-	b.start(self.global_position, dir.angle())
-	get_parent().add_child(b)
+		
+	b.start(self.global_position+Vector2(24,24), dir.angle())
 	
 # warning-ignore:unused_argument
 func _physics_process(delta):
 	get_input()
 	
-	
-	var collision  = move_and_collide(velocity * delta)
-	if collision:
-		print(collision.collider.name)
-		if "Chest" in collision.collider.name:
-			get_parent().get_node("GUI/Score").adjust(100)
+	velocity = move_and_slide(velocity)
+
 
 
 	
